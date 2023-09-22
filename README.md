@@ -1,8 +1,7 @@
 
 <h1 align="center">Implementação de um sistema de Internet Banking seguro e transparente com tecnologia Blockchain</h1>
-<h3 align="center">Implementação de um sistema de Internet Banking seguro e transparente com tecnologia Blockchain</h3>
 
-<h4 align="center">Repositorio do TCC Alunos: Gabriel Guimarães, Gabriella Spinelli e Welligton Silva</h4>
+<h3>Repositorio do TCC Alunos: Gabriel Guimarães, Gabriella Spinelli e Welligton Silva</h3>
 - 🔭 Estou utilizando como DB o **Postgres**
 
 - 👨‍💻 O back-end com **Java Spring**
