@@ -5,6 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.boot.autoconfigure.integration.IntegrationProperties.RSocket.Client;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
@@ -12,7 +13,9 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 import com.tccbanking.internetbakingspring.entities.Banco;
+import com.tccbanking.internetbakingspring.entities.Cliente;
 import com.tccbanking.internetbakingspring.repository.BancoRepository;
+import com.tccbanking.internetbakingspring.repository.ClienteRepository;
 
 @SpringBootApplication
 @EntityScan(basePackages = {"com.tccbanking.internetbakingspring.entities"})  //anotação para AO INICAR percorrer todas as classes criadas e criar tabelas no banco (função para não criar a configuração em XML)
@@ -29,17 +32,28 @@ public class InternetbakingSpringApplication {
 		SpringApplication.run(InternetbakingSpringApplication.class, args);
 	}
 
+	
 	@Bean
-	CommandLineRunner initDatabase (BancoRepository bancoRepository){
+	CommandLineRunner initDatabase (ClienteRepository clienteRepository){
 		return args -> {
-			bancoRepository.deleteAll();
+			clienteRepository.deleteAll();
 
-			Banco c = new Banco();
-			c.setName("Banco Itaú");
-			c.setCliente("Gabriel Nogueira Guimarães");
-			c.setConta("242554");
+			Cliente cli = new Cliente();
+			cli.setCpf("16897622761");
+			cli.setName("Gabriel");
+			cli.setSenha("123456789");
+			cli.setSobrenome("Nogueira Guimarães");
+			cli.setEmail("guimaraesgn30@gmail.com");
+			cli.setCep("22735661");
+			cli.setBairro("Realengo");
+			cli.setCidade("Rio de Janeiro");
+			cli.setPais("Brasil");
+			cli.setRua("Rua Marechal Falcão da Frota");
+			cli.setNumero("255");
+			cli.setConta("242554");
+			cli.setContato("976874068");
 			
-			bancoRepository.save(c);
+			clienteRepository.save(cli);
 
 		};
 	}

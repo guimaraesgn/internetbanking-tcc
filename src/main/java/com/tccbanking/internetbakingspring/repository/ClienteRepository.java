@@ -3,9 +3,11 @@ package com.tccbanking.internetbakingspring.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.tccbanking.internetbakingspring.entities.Banco;
+import com.tccbanking.internetbakingspring.entities.Cliente;
 
 @Repository
-public interface BancoRepository extends JpaRepository<Banco, Long> {
+public interface ClienteRepository extends JpaRepository<Cliente, Long>{
+
+
     
 }

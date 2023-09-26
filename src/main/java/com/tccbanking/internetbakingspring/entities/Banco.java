@@ -10,7 +10,7 @@ import jakarta.persistence.Id;
 public class Banco {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)//anotação para geração do valor da chave-primária é de responsabilidade do banco de dados.
     private Long Id;
 
     
@@ -22,7 +22,22 @@ public class Banco {
 
     private String funcionario;
 
+    private String agencia;
+    
 
+
+    public Long getId() {
+        return Id;
+    }
+    public void setId(Long id) {
+        Id = id;
+    }
+    public String getAgencia() {
+        return agencia;
+    }
+    public void setAgencia(String agencia) {
+        this.agencia = agencia;
+    }
     public String getName() {
         return name;
     }
