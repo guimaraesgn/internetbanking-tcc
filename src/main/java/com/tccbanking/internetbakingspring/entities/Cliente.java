@@ -2,6 +2,7 @@ package com.tccbanking.internetbakingspring.entities;
 
 import java.sql.Date;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -14,6 +15,9 @@ public class Cliente {
     @GeneratedValue(strategy = GenerationType.AUTO)//anotação para geração do valor da chave-primária é de responsabilidade do banco de dados.
     private Long Id;
 
+    @Column(nullable = false)
+	private String tenant;
+    
     private String Cpf;
     private String Name;
     private String Sobrenome;
@@ -130,6 +134,12 @@ public class Cliente {
     }
     public String getSenha() {
         return Senha;
+    }
+    public String getTenant() {
+        return tenant;
+    }
+    public void setTenant(String tenant) {
+        this.tenant = tenant;
     }
     
     
