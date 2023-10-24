@@ -10,7 +10,7 @@ import com.tccbanking.internetbakingspring.entities.ClienteConta;
 import com.tccbanking.internetbakingspring.repository.ClienteContaRepository;
 
 @RestController
-@RequestMapping("api/clienteconta")
+@RequestMapping("/clienteconta")
 public class ClienteContaController {
 
     private ClienteContaRepository clienteContaRepository;

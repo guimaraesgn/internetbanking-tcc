@@ -15,8 +15,7 @@ public class Cliente {
     @GeneratedValue(strategy = GenerationType.AUTO)//anotação para geração do valor da chave-primária é de responsabilidade do banco de dados.
     private Long Id;
 
-    @Column(nullable = false)
-	private String tenant;
+    
     
     private String Cpf;
     private String Name;
@@ -135,12 +134,8 @@ public class Cliente {
     public String getSenha() {
         return Senha;
     }
-    public String getTenant() {
-        return tenant;
-    }
-    public void setTenant(String tenant) {
-        this.tenant = tenant;
-    }
+   
+  
     
     
 

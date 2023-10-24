@@ -30,6 +30,7 @@ public class InternetbakingSpringApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(InternetbakingSpringApplication.class, args);
+		
 	}
 
 	
@@ -54,7 +55,7 @@ public class InternetbakingSpringApplication {
 			cli.setContato("976874068");
 			
 			clienteRepository.save(cli);
-
+		
 		};
 	}
 

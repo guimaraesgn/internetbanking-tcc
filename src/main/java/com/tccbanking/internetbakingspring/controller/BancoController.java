@@ -12,7 +12,7 @@ import com.tccbanking.internetbakingspring.entities.Banco;
 import com.tccbanking.internetbakingspring.repository.BancoRepository;
 
 @RestController
-@RequestMapping("/api/banco")
+@RequestMapping("/banco")
 public class BancoController {
 
     private BancoRepository bancoRepository;

@@ -10,10 +10,5 @@ import java.util.List;
 @Repository
 public interface ClienteRepository extends JpaRepository<Cliente, Long>{
 
-    Cliente findByIdTenant(Long id, String tenant);
-
-    List<Cliente> findAllByTenant(String tenant);
-
-
-    
+        
 }
