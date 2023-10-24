@@ -34,29 +34,6 @@ public class InternetbakingSpringApplication {
 	}
 
 	
-	@Bean
-	CommandLineRunner initDatabase (ClienteRepository clienteRepository){
-		return args -> {
-			clienteRepository.deleteAll();
-
-			Cliente cli = new Cliente();
-			cli.setCpf("16897622761");
-			cli.setName("Gabriel");
-			cli.setSenha("123456789");
-			cli.setSobrenome("Nogueira Guimarães");
-			cli.setEmail("guimaraesgn30@gmail.com");
-			cli.setCep("22735661");
-			cli.setBairro("Realengo");
-			cli.setCidade("Rio de Janeiro");
-			cli.setPais("Brasil");
-			cli.setRua("Rua Marechal Falcão da Frota");
-			cli.setNumero("255");
-			cli.setConta("242554");
-			cli.setContato("976874068");
-			
-			clienteRepository.save(cli);
-		
-		};
-	}
+	
 
 }

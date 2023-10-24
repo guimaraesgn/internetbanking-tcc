@@ -12,7 +12,7 @@ import com.tccbanking.internetbakingspring.repository.BancoRepository;
 import com.tccbanking.internetbakingspring.repository.ClienteRepository;
 
 @RestController
-@RequestMapping("/clientes") //função para dermarcar o diretorio http
+@RequestMapping("/api/clientes") //função para dermarcar o diretorio http
 public class ClienteController {
 
     private ClienteRepository clienteRepository; 
