@@ -32,11 +32,16 @@ public class User implements UserDetails {
     private String name;
     private String login;
     private String password;
+    private String cpf;
     private UserRole role;
+    private String employee;//funcionario
 
-    public User(String login, String password, UserRole role){
+    public User(String login, String name, String password, UserRole role, String employee, String cpf){
         this.login = login;
+        this.name = name;
         this.password = password;
+        this.employee = employee;
+        this.cpf = cpf;
         this.role = role;
     }
 

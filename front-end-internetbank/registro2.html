@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Login</title>
+</head>
+<body>
+    <h2>Tela de Login</h2>
+    <form id="loginForm">
+        <div>
+            <label for="login">Login:</label>
+            <input type="text" id="login" name="login" required>
+        </div>
+        <div>
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <div>
+            <button type="button" id="loginButton">Entrar</button>
+        </div>
+    </form>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const loginForm = document.getElementById("loginForm");
+            const loginButton = document.getElementById("loginButton");
+
+            loginButton.addEventListener("click", function () {
+                const login = document.getElementById("login").value;
+                const password = document.getElementById("password").value;
+
+                // Simulando a solicitação de cadastro usando o fetch
+                const url = "http://localhost:8080/auth/register"; // Substitua pela URL correta
+                const newRegister = {
+                    login,
+                    name: "Nome de Teste",
+                    password,
+                    cpf: "12345678901",
+                    employee: "Cliente",
+                    role: "ADMIN",
+                };
+
+                fetch(url, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(newRegister),
+                })
+                    .then((response) => {
+                        if (!response.ok) {
+                            throw new Error(`Erro na solicitação: ${response.status}`);
+                        }
+                        return response.json();
+                    })
+                    .then((data) => {
+                        console.log("Cadastro inserido com sucesso:", data);
+                        alert("Cadastro inserido com sucesso!");
+                    })
+                    .catch((error) => {
+                        console.error("Erro ao inserir o cadastro:", error);
+                        alert("Erro ao inserir o cadastro!");
+                    });
+            });
+        });
+    </script>
+</body>
+</html>

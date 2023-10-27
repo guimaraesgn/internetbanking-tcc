@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Aplicação Front-End</title>
+</head>
+<body>
+    <h1>Lista de Usuários</h1>
+    <ul id="userList"></ul>
+
+    <script>
+        // Função para carregar a lista de usuários da API
+        function loadUsers() {
+            fetch('http://localhost:8080/api/users') // Substitua com a URL da sua API
+                .then(response => response.json())
+                .then(users => {
+                    const userList = document.getElementById('userList');
+                    userList.innerHTML = '';
+
+                    users.forEach(user => {
+                        const listItem = document.createElement('li');
+                        listItem.textContent = `ID: ${user.id}, Nome: ${user.name}, Login: ${user.login}`;
+                        userList.appendChild(listItem);
+                    });
+                })
+                .catch(error => console.error('Erro ao carregar usuários:', error));
+        }
+
+        // Chama a função para carregar a lista de usuários quando a página carrega
+        loadUsers();
+    </script>
+</body>
+</html>
