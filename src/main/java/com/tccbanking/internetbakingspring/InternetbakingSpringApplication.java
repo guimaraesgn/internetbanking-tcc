@@ -13,9 +13,8 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 import com.tccbanking.internetbakingspring.entities.Banco;
-import com.tccbanking.internetbakingspring.entities.Cliente;
 import com.tccbanking.internetbakingspring.repository.BancoRepository;
-import com.tccbanking.internetbakingspring.repository.ClienteRepository;
+
 
 @SpringBootApplication
 @EntityScan(basePackages = {"com.tccbanking.internetbakingspring.entities"})  //anotação para AO INICAR percorrer todas as classes criadas e criar tabelas no banco (função para não criar a configuração em XML)

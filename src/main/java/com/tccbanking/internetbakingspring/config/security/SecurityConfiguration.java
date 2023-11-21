@@ -36,13 +36,16 @@ public class SecurityConfiguration {// função validar uma corrente de filtros 
         return httpSecurity
         .csrf(csrf -> csrf.disable())
         .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-        .authorizeHttpRequests(authorize -> authorize
+        .authorizeHttpRequests(request -> request
                     .requestMatchers(HttpMethod.POST, "/auth/cpf").permitAll()
                     .requestMatchers(HttpMethod.POST, "/auth/login").permitAll()
                     .requestMatchers(HttpMethod.POST, "/auth/register").permitAll()
+                                        .requestMatchers(HttpMethod.GET, "/auth/users").permitAll()
+
                     .requestMatchers(HttpMethod.POST, "/auth/employee").hasRole("ADMIN")
                     .requestMatchers(HttpMethod.POST, "/auth/employee").hasRole("USER")
-                    .anyRequest().authenticated()
+                    .anyRequest()
+                    .authenticated()
                     )
         .addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class)
         .build();

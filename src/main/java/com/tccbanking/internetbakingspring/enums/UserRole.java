@@ -1,4 +1,4 @@
-package com.tccbanking.internetbakingspring.entities;
+package com.tccbanking.internetbakingspring.enums;
 
 public enum UserRole {
 
