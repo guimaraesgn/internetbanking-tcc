@@ -1,5 +1,6 @@
 
-<h1 align="center">Implementação de um sistema de Internet Banking seguro e transparente</h1>
+<h1 align="center">IMPLEMENTAÇÃO DE UM SISTEMA DE WHITE LABEL PARA BANCOS COM
+TECNOLOGIA BLOCKCHAIN</h1>
 
 <h3>Repositorio do TCC Alunos: Gabriel Guimarães, Gabriella Spinelli e Welligton Silva</h3>
 
