@@ -14,7 +14,7 @@ TECNOLOGIA BLOCKCHAIN</h1>
 
 Diagrama de Situação:
 
-![image](https://github.com/guimaraesgn/internetbanking-tcc/assets/82847046/ebf19048-1b77-49e9-9e8a-5ece9507bd00)
+![image](diagrama.png)
 
 
 <h3 align="left">Languages and Tools:</h3>
